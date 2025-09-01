@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NDAEB Exam - Blessu's version</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f9f9f9; }
+    h1 { text-align: center; color: #2c3e50; }
+    .question { background: #fff; padding: 15px; margin: 15px 0; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .options { margin-top: 10px; }
+    .options label { display: block; margin: 5px 0; }
+    .result { margin-top: 10px; font-weight: bold; }
+    .correct { color: green; }
+    .wrong { color: red; }
+    button { background: #2c3e50; color: white; border: none; padding: 6px 14px; border-radius: 5px; cursor: pointer; margin-top: 10px; }
+    button:hover { background: #1a242f; }
+    #score { font-size: 18px; text-align: center; margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>NDAEB Sample Exam - Blessu's version</h1>
+<div class="question" data-answer="b" data-reason="The autoclave uses steam under pressure at 121–134°C, ensuring the destruction of all microorganisms including spores. It is considered the gold standard in dentistry because it provides reliable sterilization in a reasonable time. Other methods may reduce microbial load but are not consistently effective against spores.">
+<p>1. Which is the most effective method of sterilization used in dental offices?</p>
+<div class='options'>
+<label><input type="radio" name="q1" value="a"> Dry heat sterilizer</label>
+<label><input type="radio" name="q1" value="b"> Steam under pressure (autoclave)</label>
+<label><input type="radio" name="q1" value="c"> Chemical disinfectants</label>
+<label><input type="radio" name="q1" value="d"> Ultraviolet radiation</label>
+</div>
+<button onclick="checkAnswer(this, 'q1')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="c" data-reason="Handwashing reduces transient flora, which are the microorganisms most often transmitted during patient care. While it does not eliminate all microbes, it dramatically lowers the risk of cross-contamination. Sterilization is critical for instruments, but hand hygiene is the foundation of infection control.">
+<p>2. Hand hygiene is considered the single most critical step in preventing cross-infection. Why?</p>
+<div class='options'>
+<label><input type="radio" name="q2" value="a"> It removes visible debris only</label>
+<label><input type="radio" name="q2" value="b"> It eliminates all pathogens completely</label>
+<label><input type="radio" name="q2" value="c"> It significantly reduces transient flora responsible for cross-infection</label>
+<label><input type="radio" name="q2" value="d"> It is more effective than sterilization</label>
+</div>
+<button onclick="checkAnswer(this, 'q2')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="c" data-reason="Ultrasonic instrumentation generates high levels of aerosol and splatter. An N95 respirator combined with a face shield provides the most comprehensive protection for the operator. Regular surgical masks are not adequate against aerosols.">
+<p>3. Which PPE item provides the best protection against aerosols and splatter during ultrasonic scaling?</p>
+<div class='options'>
+<label><input type="radio" name="q3" value="a"> Surgical mask</label>
+<label><input type="radio" name="q3" value="b"> Protective eyewear</label>
+<label><input type="radio" name="q3" value="c"> N95 respirator with face shield</label>
+<label><input type="radio" name="q3" value="d"> Disposable gown</label>
+</div>
+<button onclick="checkAnswer(this, 'q3')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="b" data-reason="Biological monitoring uses bacterial spores (e.g., Geobacillus stearothermophilus) to verify sterilization effectiveness. This is the only method that confirms the actual killing of highly resistant microorganisms. Chemical indicators only show exposure to heat, not sterilization efficacy.">
+<p>4. Biological monitoring of sterilizers is performed using:</p>
+<div class='options'>
+<label><input type="radio" name="q4" value="a"> Chemical indicators</label>
+<label><input type="radio" name="q4" value="b"> Spore tests</label>
+<label><input type="radio" name="q4" value="c"> Color-change strips</label>
+<label><input type="radio" name="q4" value="d"> Mechanical timers</label>
+</div>
+<button onclick="checkAnswer(this, 'q4')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="b" data-reason="Standard precautions require treating all patients as potentially infectious. This approach eliminates reliance on knowing a patient’s medical history for infection control. It ensures consistent protection for both patients and healthcare providers.">
+<p>5. The term 'standard precautions' means:</p>
+<div class='options'>
+<label><input type="radio" name="q5" value="a"> Extra care for immunocompromised patients</label>
+<label><input type="radio" name="q5" value="b"> Practicing universal infection control with all patients regardless of status</label>
+<label><input type="radio" name="q5" value="c"> Using PPE only for patients with infectious disease</label>
+<label><input type="radio" name="q5" value="d"> Disinfecting only visible contaminated areas</label>
+</div>
+<button onclick="checkAnswer(this, 'q5')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="c" data-reason="Used needles must be placed immediately into a puncture-resistant sharps container without recapping. Recapping or bending increases the risk of needlestick injury. Sterilization before disposal is unnecessary and unsafe.">
+<p>6. How should used needles be disposed of in a dental setting?</p>
+<div class='options'>
+<label><input type="radio" name="q6" value="a"> Recapped and placed in regular trash</label>
+<label><input type="radio" name="q6" value="b"> Bent before disposal in sharps container</label>
+<label><input type="radio" name="q6" value="c"> Directly into a puncture-resistant sharps container without recapping</label>
+<label><input type="radio" name="q6" value="d"> Sterilized before throwing away</label>
+</div>
+<button onclick="checkAnswer(this, 'q6')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="a" data-reason="Autoclaving at 121°C (250°F) under 15 psi pressure for 15–20 minutes is the standard cycle. This ensures penetration of steam and destruction of microorganisms including spores. Shorter times or lower temperatures may not achieve sterilization.">
+<p>7. What is the minimum exposure time and temperature for autoclave sterilization at 15 psi?</p>
+<div class='options'>
+<label><input type="radio" name="q7" value="a"> 121°C for 15–20 minutes</label>
+<label><input type="radio" name="q7" value="b"> 134°C for 3 minutes</label>
+<label><input type="radio" name="q7" value="c"> 160°C for 2 hours</label>
+<label><input type="radio" name="q7" value="d"> 100°C for 10 minutes</label>
+</div>
+<button onclick="checkAnswer(this, 'q7')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="a" data-reason="Legionella and other biofilm-forming bacteria thrive in the narrow tubing of dental unit waterlines. Stagnant water and warm temperatures provide ideal growth conditions. Regular flushing and use of antimicrobial agents are required to control contamination.">
+<p>8. The main reservoir for Legionella bacteria in dental offices is:</p>
+<div class='options'>
+<label><input type="radio" name="q8" value="a"> Dental unit waterlines</label>
+<label><input type="radio" name="q8" value="b"> Handpieces</label>
+<label><input type="radio" name="q8" value="c"> Patient saliva</label>
+<label><input type="radio" name="q8" value="d"> Suction hoses</label>
+</div>
+<button onclick="checkAnswer(this, 'q8')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="b" data-reason="Blood contamination requires an intermediate-level disinfectant effective against HBV and Mycobacterium tuberculosis. These disinfectants ensure adequate reduction of pathogens on environmental surfaces. Low-level disinfectants and alcohol wipes are not sufficient.">
+<p>9. Which disinfectant is most appropriate for cleaning blood-contaminated operatory surfaces?</p>
+<div class='options'>
+<label><input type="radio" name="q9" value="a"> Alcohol wipes</label>
+<label><input type="radio" name="q9" value="b"> Intermediate-level disinfectant with tuberculocidal claim</label>
+<label><input type="radio" name="q9" value="c"> Soap and water</label>
+<label><input type="radio" name="q9" value="d"> Air drying</label>
+</div>
+<button onclick="checkAnswer(this, 'q9')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="d" data-reason="Sterile surgical gloves are manufactured to higher quality standards, providing superior barrier protection. They are individually packaged and designed for invasive procedures. Examination gloves are adequate for routine care but not surgical use.">
+<p>10. Which glove type offers the highest barrier protection during surgical procedures?</p>
+<div class='options'>
+<label><input type="radio" name="q10" value="a"> Utility gloves</label>
+<label><input type="radio" name="q10" value="b"> Vinyl examination gloves</label>
+<label><input type="radio" name="q10" value="c"> Latex examination gloves</label>
+<label><input type="radio" name="q10" value="d"> Sterile surgical gloves</label>
+</div>
+<button onclick="checkAnswer(this, 'q10')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="b" data-reason="The autoclave uses steam under pressure at 121–134°C, ensuring the destruction of all microorganisms including spores. It is considered the gold standard in dentistry because it provides reliable sterilization in a reasonable time. Other methods may reduce microbial load but are not consistently effective against spores.">
+<p>11. Which is the most effective method of sterilization used in dental offices? (variant 11)</p>
+<div class='options'>
+<label><input type="radio" name="q11" value="a"> Dry heat sterilizer</label>
+<label><input type="radio" name="q11" value="b"> Steam under pressure (autoclave)</label>
+<label><input type="radio" name="q11" value="c"> Chemical disinfectants</label>
+<label><input type="radio" name="q11" value="d"> Ultraviolet radiation</label>
+</div>
+<button onclick="checkAnswer(this, 'q11')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="c" data-reason="Handwashing reduces transient flora, which are the microorganisms most often transmitted during patient care. While it does not eliminate all microbes, it dramatically lowers the risk of cross-contamination. Sterilization is critical for instruments, but hand hygiene is the foundation of infection control.">
+<p>12. Hand hygiene is considered the single most critical step in preventing cross-infection. Why? (variant 12)</p>
+<div class='options'>
+<label><input type="radio" name="q12" value="a"> It removes visible debris only</label>
+<label><input type="radio" name="q12" value="b"> It eliminates all pathogens completely</label>
+<label><input type="radio" name="q12" value="c"> It significantly reduces transient flora responsible for cross-infection</label>
+<label><input type="radio" name="q12" value="d"> It is more effective than sterilization</label>
+</div>
+<button onclick="checkAnswer(this, 'q12')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="c" data-reason="Ultrasonic instrumentation generates high levels of aerosol and splatter. An N95 respirator combined with a face shield provides the most comprehensive protection for the operator. Regular surgical masks are not adequate against aerosols.">
+<p>13. Which PPE item provides the best protection against aerosols and splatter during ultrasonic scaling? (variant 13)</p>
+<div class='options'>
+<label><input type="radio" name="q13" value="a"> Surgical mask</label>
+<label><input type="radio" name="q13" value="b"> Protective eyewear</label>
+<label><input type="radio" name="q13" value="c"> N95 respirator with face shield</label>
+<label><input type="radio" name="q13" value="d"> Disposable gown</label>
+</div>
+<button onclick="checkAnswer(this, 'q13')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="b" data-reason="Biological monitoring uses bacterial spores (e.g., Geobacillus stearothermophilus) to verify sterilization effectiveness. This is the only method that confirms the actual killing of highly resistant microorganisms. Chemical indicators only show exposure to heat, not sterilization efficacy.">
+<p>14. Biological monitoring of sterilizers is performed using: (variant 14)</p>
+<div class='options'>
+<label><input type="radio" name="q14" value="a"> Chemical indicators</label>
+<label><input type="radio" name="q14" value="b"> Spore tests</label>
+<label><input type="radio" name="q14" value="c"> Color-change strips</label>
+<label><input type="radio" name="q14" value="d"> Mechanical timers</label>
+</div>
+<button onclick="checkAnswer(this, 'q14')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="b" data-reason="Standard precautions require treating all patients as potentially infectious. This approach eliminates reliance on knowing a patient’s medical history for infection control. It ensures consistent protection for both patients and healthcare providers.">
+<p>15. The term 'standard precautions' means: (variant 15)</p>
+<div class='options'>
+<label><input type="radio" name="q15" value="a"> Extra care for immunocompromised patients</label>
+<label><input type="radio" name="q15" value="b"> Practicing universal infection control with all patients regardless of status</label>
+<label><input type="radio" name="q15" value="c"> Using PPE only for patients with infectious disease</label>
+<label><input type="radio" name="q15" value="d"> Disinfecting only visible contaminated areas</label>
+</div>
+<button onclick="checkAnswer(this, 'q15')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="c" data-reason="Used needles must be placed immediately into a puncture-resistant sharps container without recapping. Recapping or bending increases the risk of needlestick injury. Sterilization before disposal is unnecessary and unsafe.">
+<p>16. How should used needles be disposed of in a dental setting? (variant 16)</p>
+<div class='options'>
+<label><input type="radio" name="q16" value="a"> Recapped and placed in regular trash</label>
+<label><input type="radio" name="q16" value="b"> Bent before disposal in sharps container</label>
+<label><input type="radio" name="q16" value="c"> Directly into a puncture-resistant sharps container without recapping</label>
+<label><input type="radio" name="q16" value="d"> Sterilized before throwing away</label>
+</div>
+<button onclick="checkAnswer(this, 'q16')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="a" data-reason="Autoclaving at 121°C (250°F) under 15 psi pressure for 15–20 minutes is the standard cycle. This ensures penetration of steam and destruction of microorganisms including spores. Shorter times or lower temperatures may not achieve sterilization.">
+<p>17. What is the minimum exposure time and temperature for autoclave sterilization at 15 psi? (variant 17)</p>
+<div class='options'>
+<label><input type="radio" name="q17" value="a"> 121°C for 15–20 minutes</label>
+<label><input type="radio" name="q17" value="b"> 134°C for 3 minutes</label>
+<label><input type="radio" name="q17" value="c"> 160°C for 2 hours</label>
+<label><input type="radio" name="q17" value="d"> 100°C for 10 minutes</label>
+</div>
+<button onclick="checkAnswer(this, 'q17')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="a" data-reason="Legionella and other biofilm-forming bacteria thrive in the narrow tubing of dental unit waterlines. Stagnant water and warm temperatures provide ideal growth conditions. Regular flushing and use of antimicrobial agents are required to control contamination.">
+<p>18. The main reservoir for Legionella bacteria in dental offices is: (variant 18)</p>
+<div class='options'>
+<label><input type="radio" name="q18" value="a"> Dental unit waterlines</label>
+<label><input type="radio" name="q18" value="b"> Handpieces</label>
+<label><input type="radio" name="q18" value="c"> Patient saliva</label>
+<label><input type="radio" name="q18" value="d"> Suction hoses</label>
+</div>
+<button onclick="checkAnswer(this, 'q18')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="b" data-reason="Blood contamination requires an intermediate-level disinfectant effective against HBV and Mycobacterium tuberculosis. These disinfectants ensure adequate reduction of pathogens on environmental surfaces. Low-level disinfectants and alcohol wipes are not sufficient.">
+<p>19. Which disinfectant is most appropriate for cleaning blood-contaminated operatory surfaces? (variant 19)</p>
+<div class='options'>
+<label><input type="radio" name="q19" value="a"> Alcohol wipes</label>
+<label><input type="radio" name="q19" value="b"> Intermediate-level disinfectant with tuberculocidal claim</label>
+<label><input type="radio" name="q19" value="c"> Soap and water</label>
+<label><input type="radio" name="q19" value="d"> Air drying</label>
+</div>
+<button onclick="checkAnswer(this, 'q19')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="d" data-reason="Sterile surgical gloves are manufactured to higher quality standards, providing superior barrier protection. They are individually packaged and designed for invasive procedures. Examination gloves are adequate for routine care but not surgical use.">
+<p>20. Which glove type offers the highest barrier protection during surgical procedures? (variant 20)</p>
+<div class='options'>
+<label><input type="radio" name="q20" value="a"> Utility gloves</label>
+<label><input type="radio" name="q20" value="b"> Vinyl examination gloves</label>
+<label><input type="radio" name="q20" value="c"> Latex examination gloves</label>
+<label><input type="radio" name="q20" value="d"> Sterile surgical gloves</label>
+</div>
+<button onclick="checkAnswer(this, 'q20')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="b" data-reason="The autoclave uses steam under pressure at 121–134°C, ensuring the destruction of all microorganisms including spores. It is considered the gold standard in dentistry because it provides reliable sterilization in a reasonable time. Other methods may reduce microbial load but are not consistently effective against spores.">
+<p>21. Which is the most effective method of sterilization used in dental offices? (variant 21)</p>
+<div class='options'>
+<label><input type="radio" name="q21" value="a"> Dry heat sterilizer</label>
+<label><input type="radio" name="q21" value="b"> Steam under pressure (autoclave)</label>
+<label><input type="radio" name="q21" value="c"> Chemical disinfectants</label>
+<label><input type="radio" name="q21" value="d"> Ultraviolet radiation</label>
+</div>
+<button onclick="checkAnswer(this, 'q21')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="c" data-reason="Handwashing reduces transient flora, which are the microorganisms most often transmitted during patient care. While it does not eliminate all microbes, it dramatically lowers the risk of cross-contamination. Sterilization is critical for instruments, but hand hygiene is the foundation of infection control.">
+<p>22. Hand hygiene is considered the single most critical step in preventing cross-infection. Why? (variant 22)</p>
+<div class='options'>
+<label><input type="radio" name="q22" value="a"> It removes visible debris only</label>
+<label><input type="radio" name="q22" value="b"> It eliminates all pathogens completely</label>
+<label><input type="radio" name="q22" value="c"> It significantly reduces transient flora responsible for cross-infection</label>
+<label><input type="radio" name="q22" value="d"> It is more effective than sterilization</label>
+</div>
+<button onclick="checkAnswer(this, 'q22')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="c" data-reason="Ultrasonic instrumentation generates high levels of aerosol and splatter. An N95 respirator combined with a face shield provides the most comprehensive protection for the operator. Regular surgical masks are not adequate against aerosols.">
+<p>23. Which PPE item provides the best protection against aerosols and splatter during ultrasonic scaling? (variant 23)</p>
+<div class='options'>
+<label><input type="radio" name="q23" value="a"> Surgical mask</label>
+<label><input type="radio" name="q23" value="b"> Protective eyewear</label>
+<label><input type="radio" name="q23" value="c"> N95 respirator with face shield</label>
+<label><input type="radio" name="q23" value="d"> Disposable gown</label>
+</div>
+<button onclick="checkAnswer(this, 'q23')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="b" data-reason="Biological monitoring uses bacterial spores (e.g., Geobacillus stearothermophilus) to verify sterilization effectiveness. This is the only method that confirms the actual killing of highly resistant microorganisms. Chemical indicators only show exposure to heat, not sterilization efficacy.">
+<p>24. Biological monitoring of sterilizers is performed using: (variant 24)</p>
+<div class='options'>
+<label><input type="radio" name="q24" value="a"> Chemical indicators</label>
+<label><input type="radio" name="q24" value="b"> Spore tests</label>
+<label><input type="radio" name="q24" value="c"> Color-change strips</label>
+<label><input type="radio" name="q24" value="d"> Mechanical timers</label>
+</div>
+<button onclick="checkAnswer(this, 'q24')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="b" data-reason="Standard precautions require treating all patients as potentially infectious. This approach eliminates reliance on knowing a patient’s medical history for infection control. It ensures consistent protection for both patients and healthcare providers.">
+<p>25. The term 'standard precautions' means: (variant 25)</p>
+<div class='options'>
+<label><input type="radio" name="q25" value="a"> Extra care for immunocompromised patients</label>
+<label><input type="radio" name="q25" value="b"> Practicing universal infection control with all patients regardless of status</label>
+<label><input type="radio" name="q25" value="c"> Using PPE only for patients with infectious disease</label>
+<label><input type="radio" name="q25" value="d"> Disinfecting only visible contaminated areas</label>
+</div>
+<button onclick="checkAnswer(this, 'q25')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="c" data-reason="Used needles must be placed immediately into a puncture-resistant sharps container without recapping. Recapping or bending increases the risk of needlestick injury. Sterilization before disposal is unnecessary and unsafe.">
+<p>26. How should used needles be disposed of in a dental setting? (variant 26)</p>
+<div class='options'>
+<label><input type="radio" name="q26" value="a"> Recapped and placed in regular trash</label>
+<label><input type="radio" name="q26" value="b"> Bent before disposal in sharps container</label>
+<label><input type="radio" name="q26" value="c"> Directly into a puncture-resistant sharps container without recapping</label>
+<label><input type="radio" name="q26" value="d"> Sterilized before throwing away</label>
+</div>
+<button onclick="checkAnswer(this, 'q26')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="a" data-reason="Autoclaving at 121°C (250°F) under 15 psi pressure for 15–20 minutes is the standard cycle. This ensures penetration of steam and destruction of microorganisms including spores. Shorter times or lower temperatures may not achieve sterilization.">
+<p>27. What is the minimum exposure time and temperature for autoclave sterilization at 15 psi? (variant 27)</p>
+<div class='options'>
+<label><input type="radio" name="q27" value="a"> 121°C for 15–20 minutes</label>
+<label><input type="radio" name="q27" value="b"> 134°C for 3 minutes</label>
+<label><input type="radio" name="q27" value="c"> 160°C for 2 hours</label>
+<label><input type="radio" name="q27" value="d"> 100°C for 10 minutes</label>
+</div>
+<button onclick="checkAnswer(this, 'q27')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="a" data-reason="Legionella and other biofilm-forming bacteria thrive in the narrow tubing of dental unit waterlines. Stagnant water and warm temperatures provide ideal growth conditions. Regular flushing and use of antimicrobial agents are required to control contamination.">
+<p>28. The main reservoir for Legionella bacteria in dental offices is: (variant 28)</p>
+<div class='options'>
+<label><input type="radio" name="q28" value="a"> Dental unit waterlines</label>
+<label><input type="radio" name="q28" value="b"> Handpieces</label>
+<label><input type="radio" name="q28" value="c"> Patient saliva</label>
+<label><input type="radio" name="q28" value="d"> Suction hoses</label>
+</div>
+<button onclick="checkAnswer(this, 'q28')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="b" data-reason="Blood contamination requires an intermediate-level disinfectant effective against HBV and Mycobacterium tuberculosis. These disinfectants ensure adequate reduction of pathogens on environmental surfaces. Low-level disinfectants and alcohol wipes are not sufficient.">
+<p>29. Which disinfectant is most appropriate for cleaning blood-contaminated operatory surfaces? (variant 29)</p>
+<div class='options'>
+<label><input type="radio" name="q29" value="a"> Alcohol wipes</label>
+<label><input type="radio" name="q29" value="b"> Intermediate-level disinfectant with tuberculocidal claim</label>
+<label><input type="radio" name="q29" value="c"> Soap and water</label>
+<label><input type="radio" name="q29" value="d"> Air drying</label>
+</div>
+<button onclick="checkAnswer(this, 'q29')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="d" data-reason="Sterile surgical gloves are manufactured to higher quality standards, providing superior barrier protection. They are individually packaged and designed for invasive procedures. Examination gloves are adequate for routine care but not surgical use.">
+<p>30. Which glove type offers the highest barrier protection during surgical procedures? (variant 30)</p>
+<div class='options'>
+<label><input type="radio" name="q30" value="a"> Utility gloves</label>
+<label><input type="radio" name="q30" value="b"> Vinyl examination gloves</label>
+<label><input type="radio" name="q30" value="c"> Latex examination gloves</label>
+<label><input type="radio" name="q30" value="d"> Sterile surgical gloves</label>
+</div>
+<button onclick="checkAnswer(this, 'q30')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="b" data-reason="The autoclave uses steam under pressure at 121–134°C, ensuring the destruction of all microorganisms including spores. It is considered the gold standard in dentistry because it provides reliable sterilization in a reasonable time. Other methods may reduce microbial load but are not consistently effective against spores.">
+<p>31. Which is the most effective method of sterilization used in dental offices? (variant 31)</p>
+<div class='options'>
+<label><input type="radio" name="q31" value="a"> Dry heat sterilizer</label>
+<label><input type="radio" name="q31" value="b"> Steam under pressure (autoclave)</label>
+<label><input type="radio" name="q31" value="c"> Chemical disinfectants</label>
+<label><input type="radio" name="q31" value="d"> Ultraviolet radiation</label>
+</div>
+<button onclick="checkAnswer(this, 'q31')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="c" data-reason="Handwashing reduces transient flora, which are the microorganisms most often transmitted during patient care. While it does not eliminate all microbes, it dramatically lowers the risk of cross-contamination. Sterilization is critical for instruments, but hand hygiene is the foundation of infection control.">
+<p>32. Hand hygiene is considered the single most critical step in preventing cross-infection. Why? (variant 32)</p>
+<div class='options'>
+<label><input type="radio" name="q32" value="a"> It removes visible debris only</label>
+<label><input type="radio" name="q32" value="b"> It eliminates all pathogens completely</label>
+<label><input type="radio" name="q32" value="c"> It significantly reduces transient flora responsible for cross-infection</label>
+<label><input type="radio" name="q32" value="d"> It is more effective than sterilization</label>
+</div>
+<button onclick="checkAnswer(this, 'q32')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="c" data-reason="Ultrasonic instrumentation generates high levels of aerosol and splatter. An N95 respirator combined with a face shield provides the most comprehensive protection for the operator. Regular surgical masks are not adequate against aerosols.">
+<p>33. Which PPE item provides the best protection against aerosols and splatter during ultrasonic scaling? (variant 33)</p>
+<div class='options'>
+<label><input type="radio" name="q33" value="a"> Surgical mask</label>
+<label><input type="radio" name="q33" value="b"> Protective eyewear</label>
+<label><input type="radio" name="q33" value="c"> N95 respirator with face shield</label>
+<label><input type="radio" name="q33" value="d"> Disposable gown</label>
+</div>
+<button onclick="checkAnswer(this, 'q33')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="b" data-reason="Biological monitoring uses bacterial spores (e.g., Geobacillus stearothermophilus) to verify sterilization effectiveness. This is the only method that confirms the actual killing of highly resistant microorganisms. Chemical indicators only show exposure to heat, not sterilization efficacy.">
+<p>34. Biological monitoring of sterilizers is performed using: (variant 34)</p>
+<div class='options'>
+<label><input type="radio" name="q34" value="a"> Chemical indicators</label>
+<label><input type="radio" name="q34" value="b"> Spore tests</label>
+<label><input type="radio" name="q34" value="c"> Color-change strips</label>
+<label><input type="radio" name="q34" value="d"> Mechanical timers</label>
+</div>
+<button onclick="checkAnswer(this, 'q34')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="b" data-reason="Standard precautions require treating all patients as potentially infectious. This approach eliminates reliance on knowing a patient’s medical history for infection control. It ensures consistent protection for both patients and healthcare providers.">
+<p>35. The term 'standard precautions' means: (variant 35)</p>
+<div class='options'>
+<label><input type="radio" name="q35" value="a"> Extra care for immunocompromised patients</label>
+<label><input type="radio" name="q35" value="b"> Practicing universal infection control with all patients regardless of status</label>
+<label><input type="radio" name="q35" value="c"> Using PPE only for patients with infectious disease</label>
+<label><input type="radio" name="q35" value="d"> Disinfecting only visible contaminated areas</label>
+</div>
+<button onclick="checkAnswer(this, 'q35')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="c" data-reason="Used needles must be placed immediately into a puncture-resistant sharps container without recapping. Recapping or bending increases the risk of needlestick injury. Sterilization before disposal is unnecessary and unsafe.">
+<p>36. How should used needles be disposed of in a dental setting? (variant 36)</p>
+<div class='options'>
+<label><input type="radio" name="q36" value="a"> Recapped and placed in regular trash</label>
+<label><input type="radio" name="q36" value="b"> Bent before disposal in sharps container</label>
+<label><input type="radio" name="q36" value="c"> Directly into a puncture-resistant sharps container without recapping</label>
+<label><input type="radio" name="q36" value="d"> Sterilized before throwing away</label>
+</div>
+<button onclick="checkAnswer(this, 'q36')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="a" data-reason="Autoclaving at 121°C (250°F) under 15 psi pressure for 15–20 minutes is the standard cycle. This ensures penetration of steam and destruction of microorganisms including spores. Shorter times or lower temperatures may not achieve sterilization.">
+<p>37. What is the minimum exposure time and temperature for autoclave sterilization at 15 psi? (variant 37)</p>
+<div class='options'>
+<label><input type="radio" name="q37" value="a"> 121°C for 15–20 minutes</label>
+<label><input type="radio" name="q37" value="b"> 134°C for 3 minutes</label>
+<label><input type="radio" name="q37" value="c"> 160°C for 2 hours</label>
+<label><input type="radio" name="q37" value="d"> 100°C for 10 minutes</label>
+</div>
+<button onclick="checkAnswer(this, 'q37')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="a" data-reason="Legionella and other biofilm-forming bacteria thrive in the narrow tubing of dental unit waterlines. Stagnant water and warm temperatures provide ideal growth conditions. Regular flushing and use of antimicrobial agents are required to control contamination.">
+<p>38. The main reservoir for Legionella bacteria in dental offices is: (variant 38)</p>
+<div class='options'>
+<label><input type="radio" name="q38" value="a"> Dental unit waterlines</label>
+<label><input type="radio" name="q38" value="b"> Handpieces</label>
+<label><input type="radio" name="q38" value="c"> Patient saliva</label>
+<label><input type="radio" name="q38" value="d"> Suction hoses</label>
+</div>
+<button onclick="checkAnswer(this, 'q38')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="b" data-reason="Blood contamination requires an intermediate-level disinfectant effective against HBV and Mycobacterium tuberculosis. These disinfectants ensure adequate reduction of pathogens on environmental surfaces. Low-level disinfectants and alcohol wipes are not sufficient.">
+<p>39. Which disinfectant is most appropriate for cleaning blood-contaminated operatory surfaces? (variant 39)</p>
+<div class='options'>
+<label><input type="radio" name="q39" value="a"> Alcohol wipes</label>
+<label><input type="radio" name="q39" value="b"> Intermediate-level disinfectant with tuberculocidal claim</label>
+<label><input type="radio" name="q39" value="c"> Soap and water</label>
+<label><input type="radio" name="q39" value="d"> Air drying</label>
+</div>
+<button onclick="checkAnswer(this, 'q39')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="d" data-reason="Sterile surgical gloves are manufactured to higher quality standards, providing superior barrier protection. They are individually packaged and designed for invasive procedures. Examination gloves are adequate for routine care but not surgical use.">
+<p>40. Which glove type offers the highest barrier protection during surgical procedures? (variant 40)</p>
+<div class='options'>
+<label><input type="radio" name="q40" value="a"> Utility gloves</label>
+<label><input type="radio" name="q40" value="b"> Vinyl examination gloves</label>
+<label><input type="radio" name="q40" value="c"> Latex examination gloves</label>
+<label><input type="radio" name="q40" value="d"> Sterile surgical gloves</label>
+</div>
+<button onclick="checkAnswer(this, 'q40')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="b" data-reason="The autoclave uses steam under pressure at 121–134°C, ensuring the destruction of all microorganisms including spores. It is considered the gold standard in dentistry because it provides reliable sterilization in a reasonable time. Other methods may reduce microbial load but are not consistently effective against spores.">
+<p>41. Which is the most effective method of sterilization used in dental offices? (variant 41)</p>
+<div class='options'>
+<label><input type="radio" name="q41" value="a"> Dry heat sterilizer</label>
+<label><input type="radio" name="q41" value="b"> Steam under pressure (autoclave)</label>
+<label><input type="radio" name="q41" value="c"> Chemical disinfectants</label>
+<label><input type="radio" name="q41" value="d"> Ultraviolet radiation</label>
+</div>
+<button onclick="checkAnswer(this, 'q41')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="c" data-reason="Handwashing reduces transient flora, which are the microorganisms most often transmitted during patient care. While it does not eliminate all microbes, it dramatically lowers the risk of cross-contamination. Sterilization is critical for instruments, but hand hygiene is the foundation of infection control.">
+<p>42. Hand hygiene is considered the single most critical step in preventing cross-infection. Why? (variant 42)</p>
+<div class='options'>
+<label><input type="radio" name="q42" value="a"> It removes visible debris only</label>
+<label><input type="radio" name="q42" value="b"> It eliminates all pathogens completely</label>
+<label><input type="radio" name="q42" value="c"> It significantly reduces transient flora responsible for cross-infection</label>
+<label><input type="radio" name="q42" value="d"> It is more effective than sterilization</label>
+</div>
+<button onclick="checkAnswer(this, 'q42')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="c" data-reason="Ultrasonic instrumentation generates high levels of aerosol and splatter. An N95 respirator combined with a face shield provides the most comprehensive protection for the operator. Regular surgical masks are not adequate against aerosols.">
+<p>43. Which PPE item provides the best protection against aerosols and splatter during ultrasonic scaling? (variant 43)</p>
+<div class='options'>
+<label><input type="radio" name="q43" value="a"> Surgical mask</label>
+<label><input type="radio" name="q43" value="b"> Protective eyewear</label>
+<label><input type="radio" name="q43" value="c"> N95 respirator with face shield</label>
+<label><input type="radio" name="q43" value="d"> Disposable gown</label>
+</div>
+<button onclick="checkAnswer(this, 'q43')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="b" data-reason="Biological monitoring uses bacterial spores (e.g., Geobacillus stearothermophilus) to verify sterilization effectiveness. This is the only method that confirms the actual killing of highly resistant microorganisms. Chemical indicators only show exposure to heat, not sterilization efficacy.">
+<p>44. Biological monitoring of sterilizers is performed using: (variant 44)</p>
+<div class='options'>
+<label><input type="radio" name="q44" value="a"> Chemical indicators</label>
+<label><input type="radio" name="q44" value="b"> Spore tests</label>
+<label><input type="radio" name="q44" value="c"> Color-change strips</label>
+<label><input type="radio" name="q44" value="d"> Mechanical timers</label>
+</div>
+<button onclick="checkAnswer(this, 'q44')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="b" data-reason="Standard precautions require treating all patients as potentially infectious. This approach eliminates reliance on knowing a patient’s medical history for infection control. It ensures consistent protection for both patients and healthcare providers.">
+<p>45. The term 'standard precautions' means: (variant 45)</p>
+<div class='options'>
+<label><input type="radio" name="q45" value="a"> Extra care for immunocompromised patients</label>
+<label><input type="radio" name="q45" value="b"> Practicing universal infection control with all patients regardless of status</label>
+<label><input type="radio" name="q45" value="c"> Using PPE only for patients with infectious disease</label>
+<label><input type="radio" name="q45" value="d"> Disinfecting only visible contaminated areas</label>
+</div>
+<button onclick="checkAnswer(this, 'q45')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="c" data-reason="Used needles must be placed immediately into a puncture-resistant sharps container without recapping. Recapping or bending increases the risk of needlestick injury. Sterilization before disposal is unnecessary and unsafe.">
+<p>46. How should used needles be disposed of in a dental setting? (variant 46)</p>
+<div class='options'>
+<label><input type="radio" name="q46" value="a"> Recapped and placed in regular trash</label>
+<label><input type="radio" name="q46" value="b"> Bent before disposal in sharps container</label>
+<label><input type="radio" name="q46" value="c"> Directly into a puncture-resistant sharps container without recapping</label>
+<label><input type="radio" name="q46" value="d"> Sterilized before throwing away</label>
+</div>
+<button onclick="checkAnswer(this, 'q46')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="a" data-reason="Autoclaving at 121°C (250°F) under 15 psi pressure for 15–20 minutes is the standard cycle. This ensures penetration of steam and destruction of microorganisms including spores. Shorter times or lower temperatures may not achieve sterilization.">
+<p>47. What is the minimum exposure time and temperature for autoclave sterilization at 15 psi? (variant 47)</p>
+<div class='options'>
+<label><input type="radio" name="q47" value="a"> 121°C for 15–20 minutes</label>
+<label><input type="radio" name="q47" value="b"> 134°C for 3 minutes</label>
+<label><input type="radio" name="q47" value="c"> 160°C for 2 hours</label>
+<label><input type="radio" name="q47" value="d"> 100°C for 10 minutes</label>
+</div>
+<button onclick="checkAnswer(this, 'q47')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="a" data-reason="Legionella and other biofilm-forming bacteria thrive in the narrow tubing of dental unit waterlines. Stagnant water and warm temperatures provide ideal growth conditions. Regular flushing and use of antimicrobial agents are required to control contamination.">
+<p>48. The main reservoir for Legionella bacteria in dental offices is: (variant 48)</p>
+<div class='options'>
+<label><input type="radio" name="q48" value="a"> Dental unit waterlines</label>
+<label><input type="radio" name="q48" value="b"> Handpieces</label>
+<label><input type="radio" name="q48" value="c"> Patient saliva</label>
+<label><input type="radio" name="q48" value="d"> Suction hoses</label>
+</div>
+<button onclick="checkAnswer(this, 'q48')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="b" data-reason="Blood contamination requires an intermediate-level disinfectant effective against HBV and Mycobacterium tuberculosis. These disinfectants ensure adequate reduction of pathogens on environmental surfaces. Low-level disinfectants and alcohol wipes are not sufficient.">
+<p>49. Which disinfectant is most appropriate for cleaning blood-contaminated operatory surfaces? (variant 49)</p>
+<div class='options'>
+<label><input type="radio" name="q49" value="a"> Alcohol wipes</label>
+<label><input type="radio" name="q49" value="b"> Intermediate-level disinfectant with tuberculocidal claim</label>
+<label><input type="radio" name="q49" value="c"> Soap and water</label>
+<label><input type="radio" name="q49" value="d"> Air drying</label>
+</div>
+<button onclick="checkAnswer(this, 'q49')">Submit</button>
+<div class="result"></div>
+</div>
+
+<div class="question" data-answer="d" data-reason="Sterile surgical gloves are manufactured to higher quality standards, providing superior barrier protection. They are individually packaged and designed for invasive procedures. Examination gloves are adequate for routine care but not surgical use.">
+<p>50. Which glove type offers the highest barrier protection during surgical procedures? (variant 50)</p>
+<div class='options'>
+<label><input type="radio" name="q50" value="a"> Utility gloves</label>
+<label><input type="radio" name="q50" value="b"> Vinyl examination gloves</label>
+<label><input type="radio" name="q50" value="c"> Latex examination gloves</label>
+<label><input type="radio" name="q50" value="d"> Sterile surgical gloves</label>
+</div>
+<button onclick="checkAnswer(this, 'q50')">Submit</button>
+<div class="result"></div>
+</div>
+
+
+<button onclick="finishExam()">Finish Exam</button>
+<div id="score"></div>
+
+<script>
+  let totalCorrect = 0;
+  let finished = false;
+
+  function checkAnswer(button, questionName) {
+    if (finished) return;
+    const questionDiv = button.parentElement;
+    const selected = questionDiv.querySelector('input[name="' + questionName + '"]:checked');
+    const resultDiv = questionDiv.querySelector('.result');
+    const correctAnswer = questionDiv.dataset.answer;
+    const reason = questionDiv.dataset.reason;
+    if (selected) {
+      if (selected.value === correctAnswer) {
+        if (!resultDiv.classList.contains('correct')) { totalCorrect++; }
+        resultDiv.innerHTML = "✅ Correct! " + reason;
+        resultDiv.className = "result correct";
+      } else {
+        resultDiv.innerHTML = "❌ Wrong. Correct answer: " + correctAnswer.toUpperCase() + ". " + reason;
+        resultDiv.className = "result wrong";
+      }
+    } else {
+      resultDiv.innerHTML = "⚠️ No answer selected.";
+      resultDiv.className = "result wrong";
+    }
+  }
+
+  function finishExam() {
+    finished = true;
+    const questions = document.querySelectorAll('.question');
+    questions.forEach(q => {
+      const inputs = q.querySelectorAll('input[type=radio]');
+      inputs.forEach(i => i.disabled = true);
+      const btn = q.querySelector('button');
+      if (btn) btn.disabled = true;
+    });
+    const scoreDiv = document.getElementById('score');
+    scoreDiv.innerHTML = "Final Score: " + totalCorrect + " / " + questions.length +
+                         " (" + Math.round((totalCorrect/questions.length)*100) + "%)";
+  }
+</script>
+</body>
+</html>
